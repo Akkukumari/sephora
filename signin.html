@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form{
+            margin: auto;
+            max-width: 500px;
+            border:1px solid blue ;
+            margin-top: 90px;
+            margin-bottom: 90px;
+        }
+        #form>h4{
+            margin-top: 60px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        #form>div>h2{
+            font-style: italic;
+        }
+        #form>div:nth-child(2){
+            width: 600px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        #form>div:nth-child(2)>div{
+            /* border:1px solid blue ; */
+            width: 250px;
+            height: max-content;
+            margin: auto;
+            border-radius: 9px;
+        }
+        #form>div:nth-child(2)>div>a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+        }
+        #form>div:nth-child(2)>div:nth-child(1){
+            color: black;
+            text-align: center;
+        }
+        #form>div:nth-child(2)>div:nth-child(2){
+           
+            color:black;
+            text-align: center;
+        }
+        #form>div>form{
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        #form>div>form>input,  #form>div>form label{
+            width: 300px;
+            height: 40px;
+            margin: auto;
+            margin-bottom: 19px;
+        }
+        #form>div>form>div, #form>p,  #form>div>form+a{
+            width: 300px;
+            height: 30px;
+            margin: auto;
+            margin-bottom: 19px;
+            font-size: x-small;
+            /* border:1px solid blue ; */
+        }
+        
+        #form>hr{
+            width: 700px;
+            margin: auto;
+        }
+        #form>p{
+            margin-top: 90px;
+            margin-bottom: 90px;
+        }
+        #button{
+        background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h4>Create an Account</h4><hr>
+        <div>
+            <div><h2>Beauty INSIDER</h2>
+         <p>Join the beauty insider loyality programm. Earn points, get FREE 
+            standard shipping, redeem rewards and more.</p></div>
+        </div>
+       
+        <div>
+            <form id="signin" action="">
+                <input type="text" ; placeholder="First Name" id="name">
+                <input type="text" ; placeholder="Last Name" id="name">
+                <input type="email" ; placeholder="Email Address" id="email">
+                <input type="password" ; placeholder="Password(6 to 12 character)" id="password">
+                <input type="number" placeholder="Phone Number" id="no">
+                <input type="password" placeholder="conform password" id="password2">
+            </div>
+            <input type="submit" value="Join Now">
+  
+    
+ 
+                <div>
+                
+                </div>
+                <div>
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <label for="checkbox">By clicking “Join Now” you acknowledge that you are a U.S. or Canada resident and (1) have read Sephora’s Privacy Policy and Notice of Financial Incentive, (2), agree to Terms of Use, Beauty Insider Terms, and to automatically receive Beauty Insider offers and notifications via email.<a href="">terms of service</a> and <a href="">privacy policy</a> </label>
+
+    
+                    <a href="">forgot password</a>
+                </div>
+                
+            </form>
+            
+        </div>
+        <p>Already a member? <a href="signin.html">Sign In</a></p>
+    </div>
+</body>
+</html>
+<script>
+    let arr=JSON.parse(localStorage.getItem("data"))||[]
+ let form= document.getElementById("signin")
+ form.addEventListener("submit", (e)=>{
+    e.preventDefault()
+    let check=true
+    arr.forEach((element) => {
+    if(element.username==form.Username.value){
+        check=false
+    }
+});
+    if(form.fname.value==""||form.lname.value==""|| form.email.value=="" ||form.Username.value==""||form.password.value==""){
+        alert("fill all the details")
+    } else if(form.password.value!=form.password2.value){
+        alert("password is not same")
+    } else if(check==false){
+        alert("already used username")
+    }
+    else {
+        let obj={
+        fname:form.fname.value,
+        lname:form.lname.value,
+        email:form.email.value,
+        username:form.Username.value,
+        password:form.password.value,
+    }
+arr.push(obj)
+      localStorage.setItem("data",JSON.stringify(arr))
+      self.location="signin.html"
+    }
+ })
+</script>

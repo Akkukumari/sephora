@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-left: 70px;
+    margin-top: 15px;
+}
+
+#main {
+    height: 100%;
+    width: 90%;
+    /* border: 1px solid red; */
+    margin: auto;
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+#main>div:nth-child(1) {
+    /* border: 1px solid blue; */
+    width: 30%;
+
+}
+
+#main>div:nth-child(2) {
+    /* border: 1px solid blue; */
+    width: 100%;
+}
+
+#second>h2 {
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+#second>p {
+    margin-left: 200px;
+    margin-top: -20px;
+    color: grey;
+}
+
+.in {
+    margin-left: 340px;
+    margin-top: -18px;
+
+}
+
+.in>input {
+    border: 0px;
+}
+
+#priceSort {
+    margin-left: 710px;
+    margin-top: -300px;
+    padding: 9px;
+    width: 22%;
+    cursor: pointer;
+}
+
+#sorter {
+    margin-top: -20px;
+}
+
+.input {
+    margin-top: 15px;
+}
+
+.input>input {
+    border: none;
+    width: 140px;
+}
+
+.input>p {
+    margin-left: 160px;
+    margin-top: -15px;
+    font-size: 15px;
+    color: #e40046;
+    cursor: pointer;
+}
+
+.h {
+    margin-top: 25px;
+}
+
+#first>h4 {
+    margin-top: 22px;
+    /* margin-left: 12px; */
+    margin-right: 130px;
+}
+
+#first>h4:hover {
+    color: #e40046;
+    cursor: pointer;
+}
+
+#first>p {
+    margin-left: 25px;
+    margin-top: 8px;
+}
+
+#first>p:hover {
+    color: #e40046;
+    cursor: pointer;
+}
+
+.s {
+    margin-left: 60px;
+}
+
+#ShoesFilter {
+    margin-top: 20px;
+    margin-left: 15px;
+    padding: 8px;
+    width: 90%;
+}
+
+.r {
+    margin-top: 90px;
+    font-weight: bolder;
+}
+
+#men-products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#men-products>div {
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 400px;
+}
+
+img {
+    width: 100%;
+}
+
+#men-products>div:hover button {
+    display: block;
+}
+
+h4 {
+    text-align: center;
+}
+
+button {
+    margin: auto;
+    display: none;
+    text-align: center;
+    margin-left: 60px;
+    padding: 6px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.C>h4 {
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 200px;
+    font-size: 18px;
+}
+
+.C>p {
+    margin-top: 12px;
+    margin-left: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.line {
+    margin-top: 20px;
+}
+
+.d>h4 {
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 200px;
+    font-size: 18px;
+}
+
+.d>ul {
+    margin-left: 32px;
+    margin-top: 10px;
+}
